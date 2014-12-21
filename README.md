@@ -68,6 +68,16 @@ var me = "John";
 console.log(me); // prints "John"
 ````
 
+**Run the App!**
+
+We want to run our app in Node's _harmony_ mode, which will give us access to the features we're demonstrating, and to do so, we pass the `--harmony` flag to the node command.  So, to run our app, select the bash tab in the Console View in the bottom window-pane of Cloud9, then enter the following command and press enter:
+
+    node --harmony app.js
+
+Check out this screenshot of running our app:
+
+<img src="https://raw.githubusercontent.com/OperationSpark/variables-and-constants/master/img/run-the-app.png">
+
 Above, we've initialized the variable to the String "John".
 
 
