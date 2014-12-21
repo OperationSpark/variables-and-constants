@@ -2,15 +2,28 @@
 
 'use strict';
 
+
 // TODO 1 : Declare and initialize a variable named me //
 var me = "John";
 console.log(me);
+
 
 // TODO 2 : Declare but DO NOT initialize a variable named you //
 var you; 
 console.log(you);
 
-// TODO 3 : Create two variables initialized to primitive values //
+
+// TODO 3 : Create a constant to represent your date of birth //
+const dateOfBirth = "May 17, 1990";
+console.log(dateOfBirth);
+
+
+// TODO 4 Try try to reassign the dateOfBirth //
+dateOfBirth = "January 1st, 1970";
+console.log(dateOfBirth);
+
+
+// TODO 5 : Create two variables initialized to primitive values //
 
 
 

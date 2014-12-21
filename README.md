@@ -29,13 +29,7 @@ We can argue that variables and constants are the building blocks of any applica
 
 When we run an application, the _runtime_ reads and executes our code line by line, and when it comes across a variable or constant, it commits them to memory much in the same way that you and I might read a story and begin to put the characters into our working memory.
 
-
-````javascript
-var person = {name: "John",
-              gender: "Male",
-              currentCity: "New Orleans",
-              ambition: "World Class Jazz Musician"};
-````
+### Declaration and Initialization
 
 In JavaScript, we declare variables and constants using the `var` and `const` keywords, followed by a _name_ for the variable or constant:
 
@@ -54,7 +48,7 @@ var person; // Here, we've declared a person variable, but have left it undefine
 console.log(person); // prints "undefined"
 ````
 
-**TODO 1**
+###TODO 1 : Declare and Initialize a Variable
 
 Let's create a few variables, open up the file at:
 
@@ -70,7 +64,7 @@ console.log(me); // prints "John"
 
 Passing our variable `me` to the `console.log()` function will cause the value of `me` to be printed to the command-line.
 
-**TODO 2**
+###TODO 2 : Declare But Do Not Initialize a Variable
 
 Ok, while we're at it, let's declare a variable called `you`, but we will NOT initialize it to any value.  Find TODO 2 and enter the following code:
 
@@ -84,7 +78,7 @@ console.log(you);
 
 For our exercise, we want to run our app in Node's _harmony_ mode, which will give us access to the features we're demonstrating, and to do so, we pass the `--harmony` flag to the node command.  So, to run our app:
 
-A) **Select the bash tab in the Console View** in the bottom window-pane of Cloud9
+A) **Select the bash tab (the command-line) in the Console View** in the bottom window-pane of Cloud9
 B) **Enter the command** that follows **and press enter**:
 
     node --harmony app.js
@@ -97,20 +91,34 @@ Sweet, after entering the command `node --harmony app.js` and pressing enter, yo
 
 <img src="https://raw.githubusercontent.com/OperationSpark/variables-and-constants/master/img/first-run.png">
 
-Great stuff, we've initialized the variable to the String "John" and successfully printed that variable to the console, which outputted the String "John" on the command-line!
+Great stuff!  We've initialized the variable to the String "John" and successfully printed that variable to the console, which outputted the String "John" on the command-line!
+
+Next, we declared a variable called `you`, but we did not initialize it to any value, so when we asked `console.log()` to print the value of `you`, the value of `you` resolved to `undefined`, which was printed to the command-line!
 
 
+###TODO 3 : Declare and Initialize a Constant
 
-Unlike variables, because constants can never change, in strict mode you must initialize constants at declaration time.  In non-strict mode, you'd probably see a warning that your constant is being forever initialized to `undefined`!
+Unlike variables, because constants can never change, in strict mode you must initialize constants at declaration time.  In non-strict mode, you'd probably see a warning that your constant is being forever initialized to `undefined`, but it's best to avoid doing so.
+
+Create a constant to represent your date of birth:
 
 ````javascript
+// TODO 3 : Create a constant to represent your date of birth //
 const dateOfBirth = "May 17, 1990";
 console.log(dateOfBirth); // prints "May 17, 1990"
+````
 
-// Here, we try to reassign the dateOfBirth - without luck //
+###TODO 4 : Attempt to Reassign the Value of a Constant
+
+````javascript
+// TODO 4 Try try to reassign the dateOfBirth //
 dateOfBirth = "January 1st, 1970";
 console.log(dateOfBirth); // prints "May 17, 1990"
 ````
+
+**Run the App!**
+
+This time, be superuser to run your app: Select the bash terminal again, and this time, use the `up-arrow` to cycle backwards through the list of previously executed commands to find the last time you executed `node --harmony app.js`.  Once you see the command appear at the $ prompt, simply press `enter` to execute our command to run our app.
 
 Strictly speaking, this won't work:
 
@@ -137,3 +145,15 @@ console.log(dob);
 ````
 
 
+
+
+****
+
+
+
+````javascript
+var person = {name: "John",
+              gender: "Male",
+              currentCity: "New Orleans",
+              ambition: "World Class Jazz Musician"};
+````
