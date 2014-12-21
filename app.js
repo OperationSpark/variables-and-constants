@@ -3,12 +3,12 @@
 'use strict';
 
 // TODO 1 : Declare and initialize a variable named me //
-var me = "John";  // Here, we've initialized the variable to the String "John" //
-console.log(me); // prints "John"
+var me = "John";
+console.log(me);
 
 // TODO 2 : Declare but DO NOT initialize a variable named you //
-var you; // Here, we've declared a person variable, but have left it undefined
-console.log(you); // prints "undefined"
+var you; 
+console.log(you);
 
 // TODO 3 : Create two variables initialized to primitive values //
 

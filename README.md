@@ -68,17 +68,36 @@ var me = "John";
 console.log(me); // prints "John"
 ````
 
+Passing our variable `me` to the `console.log()` function will cause the value of `me` to be printed to the command-line.
+
+**TODO 2**
+
+Ok, while we're at it, let's declare a variable called `you`, but we will NOT initialize it to any value.  Find TODO 2 and enter the following code:
+
+````javascript
+// TODO 2 : Declare but DO NOT initialize a variable named you //
+var you; 
+console.log(you);
+````
+
 **Run the App!**
 
-We want to run our app in Node's _harmony_ mode, which will give us access to the features we're demonstrating, and to do so, we pass the `--harmony` flag to the node command.  So, to run our app, select the bash tab in the Console View in the bottom window-pane of Cloud9, then enter the following command and press enter:
+For our exercise, we want to run our app in Node's _harmony_ mode, which will give us access to the features we're demonstrating, and to do so, we pass the `--harmony` flag to the node command.  So, to run our app:
+
+A) **Select the bash tab in the Console View** in the bottom window-pane of Cloud9
+B) **Enter the command** that follows **and press enter**:
 
     node --harmony app.js
 
-Check out this screenshot of running our app:
+Here's a screenshot of entering the command to run our app:
 
 <img src="https://raw.githubusercontent.com/OperationSpark/variables-and-constants/master/img/run-the-app.png">
 
-Above, we've initialized the variable to the String "John".
+Sweet, after entering the command `node --harmony app.js` and pressing enter, you should see the following output on the command-line:
+
+<img src="https://raw.githubusercontent.com/OperationSpark/variables-and-constants/master/img/first-run.png">
+
+Great stuff, we've initialized the variable to the String "John" and successfully printed that variable to the console, which outputted the String "John" on the command-line!
 
 
 
