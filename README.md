@@ -108,19 +108,59 @@ const dateOfBirth = "May 17, 1990";
 console.log(dateOfBirth); // prints "May 17, 1990"
 ````
 
-###TODO 4 : Attempt to Reassign the Value of a Constant
-
-````javascript
-// TODO 4 Try try to reassign the dateOfBirth //
-dateOfBirth = "January 1st, 1970";
-console.log(dateOfBirth); // prints "May 17, 1990"
-````
-
 **Run the App!**
 
 This time, be superuser to run your app: Select the bash terminal again, and this time, use the `up-arrow` to cycle backwards through the list of previously executed commands to find the last time you executed `node --harmony app.js`.  Once you see the command appear at the $ prompt, simply press `enter` to execute our command to run our app.
 
+````
+myuseri@variables-and-constants:~/workspace (master) $ node --harmony app.js
+John
+undefined
+May 17, 1990
+````
+
+Alrighty, we created and used our constant - no reason for birth date to change!
+
+###TODO 4 : Attempt to Reassign the Value of a Constant
+
+Let's see what happens when we try to change the value of a constant.  Add the following code under TOOD 4:
+
+
+````javascript
+// TODO 4 Try try to reassign the dateOfBirth //
+dateOfBirth = "January 1st, 1970";
+console.log(dateOfBirth);
+````
+
+**Run the App!**
+
+Boom!
+
+<img src="https://raw.githubusercontent.com/OperationSpark/variables-and-constants/master/img/reassign-const-error.png">
+
+Lesson learned!  You cannot reassign the value of a constant because by nature, constants are forever!
+
+You will even notice in the image above the Cloud9 is trying to warn you before hand that you are **Attempting to override 'dateOfBirth' which is a constant**.  Cloud9 _no likey_!
+
+In some runtime environments, like strict mode, you'll trip an error in attempting to overwrite the value of a constant; in others, the attempt will merely _silently fail_.
+
+***
+**IMPORTANT STEP : BEFORE WE CONTINUE > Remove the code from step 4, otherwise you'll continue to trip the error!**
+***
+
+### Primatives are Immutable Where Objects Are Mutable
+
+In JavaScript, primitive values, which include undefined, null, booleans, numbers, and strings are immutable, meaning, you are never changing the value of a number, you are only ever reassigning a variable to the value of another number.
+
+### TODO 5 : Create and Reassign Primatives
+
+
+
+and objects (including arrays and functions)
+
 Strictly speaking, this won't work:
+
+
 
 ````javascript
 p = "potato";

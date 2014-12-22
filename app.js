@@ -19,14 +19,17 @@ console.log(dateOfBirth);
 
 
 // TODO 4 Try try to reassign the dateOfBirth //
-dateOfBirth = "January 1st, 1970";
-console.log(dateOfBirth);
-
-
-// TODO 5 : Create two variables initialized to primitive values //
 
 
 
+// TODO 5 : Create variables assigned to primative values //
+// var a = 1;
+// var b = a;
+// console.log("a: " + a);
+// console.log("b: " + b);
+// b = 2;
+// console.log("a: " + a);
+// console.log("b: " + b);
 
 
 
@@ -45,11 +48,7 @@ console.log(dateOfBirth);
 // d = "Jack";
 // console.log(d);
 
-// var e = 1;
-// var f = e;
-// console.log(f);
-// f = 2;
-// console.log(e);
+
 
 // // Because the person variable has already been declared, we can simply assign it a value at any time AFTER its declaration //
 // person = {
