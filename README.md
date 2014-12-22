@@ -74,7 +74,7 @@ var you;
 console.log(you);
 ````
 
-**Run the App!**
+**Save and Run the App!**
 
 For our exercise, we want to run our app in Node's _harmony_ mode, which will give us access to the features we're demonstrating, and to do so, we pass the `--harmony` flag to the node command.  So, to run our app:
 
@@ -108,22 +108,17 @@ const dateOfBirth = "May 17, 1990";
 console.log(dateOfBirth); // prints "May 17, 1990"
 ````
 
-**Run the App!**
+**Save and Run the App!**
 
-This time, be superuser to run your app: Select the bash terminal again, and this time, use the `up-arrow` to cycle backwards through the list of previously executed commands to find the last time you executed `node --harmony app.js`.  Once you see the command appear at the $ prompt, simply press `enter` to execute our command to run our app.
+This time, be superuser to run your app: Select the bash terminal again, and this time, use the `up-arrow` to cycle backwards through the list of previously executed commands to find the last time you executed `node --harmony app.js`.  Once you see the command appear at the $ prompt, simply press `enter` to execute our command to run our app:
 
-````
-myuseri@variables-and-constants:~/workspace (master) $ node --harmony app.js
-John
-undefined
-May 17, 1990
-````
+<img src="https://raw.githubusercontent.com/OperationSpark/variables-and-constants/master/img/print-const.png">
 
-Alrighty, we created and used our constant - no reason for birth date to change!
+Alrighty, we created and used our constant - no reason for a birth date to change!
 
 ###TODO 4 : Attempt to Reassign the Value of a Constant
 
-Let's see what happens when we try to change the value of a constant.  Add the following code under TOOD 4:
+But, just for kicks, let's see what happens when we try to change the value of a constant.  Add the following code under TOOD 4:
 
 
 ````javascript
@@ -132,7 +127,7 @@ dateOfBirth = "January 1st, 1970";
 console.log(dateOfBirth);
 ````
 
-**Run the App!**
+**Save and Run the App!**
 
 Boom!
 
@@ -150,17 +145,47 @@ In some runtime environments, like strict mode, you'll trip an error in attempti
 
 ### Primatives are Immutable Where Objects Are Mutable
 
-In JavaScript, primitive values, which include undefined, null, booleans, numbers, and strings are immutable, meaning, you are never changing the value of a number, you are only ever reassigning a variable to the value of another number.
+In JavaScript, primitive values - which include undefined, null, booleans, numbers, and strings - are immutable.  That's right, primitives values never change: variables assigned to primitive values can only be reassigned to other primative values.
+
+Think about this, you never change the value of a number, you are only ever reassigning a variable to the value of another number.  Same goes with strings, which might seem strange because strings are treated as arrays of characters, but any operation on a string returns a _new_ string!
+
+Complex objects, including arrays and objects, _are_ mutable!  So when you add elements to an array or change properties within an object, you're mutating that object, itself - and all variables referencing that object will _feel_ those changes!
 
 ### TODO 5 : Create and Reassign Primatives
 
+Let's look at what this all means for assignment of values to variables:
+
+````javascript
+// TODO 5 : Create two variables assigned to primative values and reassign the second variable to a new value //
+var a = 1;
+var b = a;
+console.log("a: " + a);
+console.log("b: " + b);
+b = 2;
+console.log("a: " + a);
+console.log("b: " + b);
+````
+
+**Save and Run the App!**
+
+<img src="https://raw.githubusercontent.com/OperationSpark/variables-and-constants/master/img/reassign-primatives.png">
+
+Even though `b` was initialized by assignment to `a`, the assignment expression evaluates and returns the _value_ of `a`, and does not point `b` to `a`.  Therefore the assignment of the new value `2` to `b` does not update the value of `a`.
 
 
-and objects (including arrays and functions)
+
+
+
+
+
+
+
+
+
+
+
 
 Strictly speaking, this won't work:
-
-
 
 ````javascript
 p = "potato";

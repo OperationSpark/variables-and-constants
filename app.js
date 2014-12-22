@@ -22,31 +22,25 @@ console.log(dateOfBirth);
 
 
 
-// TODO 5 : Create variables assigned to primative values //
-// var a = 1;
-// var b = a;
-// console.log("a: " + a);
-// console.log("b: " + b);
-// b = 2;
-// console.log("a: " + a);
-// console.log("b: " + b);
+// TODO 5 : Create two variables assigned to primitive values and reassign the second variable to a new value //
+var a = 1;
+var b = a;
+console.log("a: " + a);
+console.log("b: " + b);
+b = 2;
+console.log("a: " + a);
+console.log("b: " + b);
 
 
+// TODO 6 : Create and mutate an Object //
+var first = {key: "value"};
+var second = first;
+console.log("first: " + first.key);
+console.log("second: " + second.key);
+second.key = "new value";
+console.log("first: " + first.key);
+console.log("second: " + second.key);
 
-
-
-
-
-
-// var a = {key: "value"};
-// var b = a;
-// b.key = "new value";
-// console.log(a.key);
-
-// var c = "John";
-// var d = c;
-// d = "Jack";
-// console.log(d);
 
 
 
@@ -57,9 +51,3 @@ console.log(dateOfBirth);
 //     city: "New Orleans"
 // };
 // console.log(person);
-
-// const name = 'john';
-// console.log(name);
-// name = 'larry';
-// console.log(name);
-
