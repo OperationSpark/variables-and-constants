@@ -145,15 +145,38 @@ In some runtime environments, like strict mode, you'll trip an error in attempti
 
 ### Primatives are Immutable Where Objects Are Mutable
 
-In JavaScript, primitive values - which include undefined, null, booleans, numbers, and strings - are immutable.  That's right, primitives values never change: variables assigned to primitive values can only be reassigned to other primative values.
+Sometimes, it can be a bit confusing for those of us starting out in programming to understand that, in JavaScript, primitive values are immutable, where complex objects _are_ mutable.
 
-Think about this, you never change the value of a number, you are only ever reassigning a variable to the value of another number.  Same goes with strings, which might seem strange because strings are treated as arrays of characters, but any operation on a string returns a _new_ string!
+Primitive values include the types `undefined`, `null`, `boolean`, `number`, and `string`.  They are immutable, they are never directly modified.  The number `2` is always the number `2`, and `null` is the only and only `null`.  Variables _assigned_ to primitive values can only be _reassigned_ to other values, primitive or complex.
+
+Think about this, you never change the value of a number, you are only ever reassigning a variable to the value of another number.  Same goes with strings, which might seem strange because strings are treated as arrays of characters, but any modifying operation on a string returns a _new_ string!  For example:
+
+````javascript
+var myString = 'Hello World';
+console.log(myString.slice(0, myString.indexOf(' '))); // prints "Hello"
+console.log(myString); // prints "Hello World"
+````
+
+Simply put, objects group together variables in one container.  Essentially, the name of the variable becomes the key by which we access its value.  By key, we can store any type of data in an object, including functions!  Check it out:
+
+````javascript
+var myObject = {
+    someKey: "someValue",
+    printValue: function() {
+        console.log(this.someKey);
+    }
+};
+console.log(myObject.someKey);  // prints "someValue"
+myObject.printValue();          // prints "someValue"
+````
 
 Complex objects, including arrays and objects, _are_ mutable!  So when you add elements to an array or change properties within an object, you're mutating that object, itself - and all variables referencing that object will _feel_ those changes!
 
+Let's look at what immutable and mutable mean when it comes to assignment of values to variables.
+
 ### TODO 5 : Create and Reassign Primatives
 
-Let's look at what this all means for assignment of values to variables:
+Create some variables assigned to primative values, then reassign one of them:
 
 ````javascript
 // TODO 5 : Create two variables assigned to primative values and reassign the second variable to a new value //
@@ -172,53 +195,55 @@ console.log("b: " + b);
 
 Even though `b` was initialized by assignment to `a`, the assignment expression evaluates and returns the _value_ of `a`, and does not point `b` to `a`.  Therefore the assignment of the new value `2` to `b` does not update the value of `a`.
 
+Fine, let's try something similar with objects:
 
+### TODO 6 : Mutate an Object
 
-
-
-
-
-
-
-
-
-
-
-
-Strictly speaking, this won't work:
+Create two references to the same object, then alter the second one:
 
 ````javascript
-p = "potato";
-console.log(p);
+// TODO 6 : Create and mutate an Object //
+var first = {key: "value"};
+var second = first;
+console.log("first: " + first.key);
+console.log("second: " + second.key);
+second.key = "new value";
+console.log("first: " + first.key);
+console.log("second: " + second.key);
 ````
 
-In non-strict mode, this will fly with a warning, but it strict mode, not so much, you'll trip a runtime error:
+**Save and Run the App!**
 
-````
-/home/ubuntu/workspace/app.js:14
-p = "j";
-  ^
-ReferenceError: p is not defined
-````
+<img src="https://raw.githubusercontent.com/OperationSpark/variables-and-constants/master/img/mutate-an-object.png">
 
-You also cannot declare constants witout initializing them too, as that would sort of be silly.  In strict mode, you'll also trip an error in trying to do this:
+Alrighty, so in this case, modifying the `second` variable also meant that the value of `first` was altered.  Why?  Because both `first` and `second` held references to the same instance of our object, which was originally initialized as `{key: "value"}`, but updated to `{key: "new value"}`
+
+Finally, let's try one more experiment with variables.
+
+### TODO 7 : Nullify a Reference
+
+// TODO 7 : Nullify the reference held by the variable second //
+second = null;
+console.log("first: ", first);
+console.log("second: " + second);
+
+**Save and Run the App!**
+
+<img src="https://raw.githubusercontent.com/OperationSpark/variables-and-constants/master/img/mutate-an-object.png">
+
+Ok, this time around, notice that when we set `second` to `null`, we are only dereferencing the value stored in the variable `second`, and we're not altering the value stored in `first` variable.  Also, note that the `second` variable still exits, but its value is now `null`, meaning, its _empty_.
+
+Nice work, we've come to the end of our lesson.  But wait, one last thing, I really want to hit home that when we use the keywords `var` and `const`, we are asking the runtime to keep in memory these names and the values to which these names may point.  We can still use values that we don't _pin_ or _commit_ to memory, you'll just have no way to ever get them back.
+
+Notice in this next TODO, we're using the string value of `Good Bye`, but without storing it in a variable or constant, the value exists for a split second, and after that line is executed, exits no more:
+
+### TODO 8 : Nullify a Reference
 
 ````javascript
-const dob;
-dob = 1970;
-console.log(dob);
+// TODO 8 : Use a value for an split second //
+console.log("Good Bye!");
 ````
 
+**Save and Run the App!**
 
-
-
-****
-
-
-
-````javascript
-var person = {name: "John",
-              gender: "Male",
-              currentCity: "New Orleans",
-              ambition: "World Class Jazz Musician"};
-````
+    Good Bye!

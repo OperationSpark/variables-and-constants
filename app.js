@@ -21,7 +21,6 @@ console.log(dateOfBirth);
 // TODO 4 Try try to reassign the dateOfBirth //
 
 
-
 // TODO 5 : Create two variables assigned to primitive values and reassign the second variable to a new value //
 var a = 1;
 var b = a;
@@ -41,13 +40,11 @@ second.key = "new value";
 console.log("first: " + first.key);
 console.log("second: " + second.key);
 
+// TODO 7 : Nullify the reference held by the variable second //
+second = null;
+console.log("first: ", first);
+console.log("second: " + second);
 
+// TODO 8 : Use a value for an split second //
+console.log("Good Bye!");
 
-
-// // Because the person variable has already been declared, we can simply assign it a value at any time AFTER its declaration //
-// person = {
-//     nameFirst: "Sam",
-//     nameLast: "Jones",
-//     city: "New Orleans"
-// };
-// console.log(person);
