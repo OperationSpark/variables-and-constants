@@ -233,7 +233,7 @@ console.log("second: " + second);
 
 <img src="https://raw.githubusercontent.com/OperationSpark/variables-and-constants/master/img/nullify-reference.png">
 
-Ok, this time around, notice that when we set `second` to `null`, we are only dereferencing the value stored in the variable `second`, and we're not altering the value stored in `first` variable.  This is because both `first` and `second` both hold references to the same object.
+Ok, this time around, notice that when we set `second` to `null`, we are only dereferencing the value stored in the variable `second`, and we're not altering the value stored in `first` variable.  This is because both `first` and `second` hold references to the same object.
 
 Imagine that you and I are both looking at the same object, like a car: just because I stop looking at the car doesn't mean that it ceases to exist for you.  I've only removed my (visual) reference to the car.
 
