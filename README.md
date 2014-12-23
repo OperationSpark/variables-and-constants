@@ -243,7 +243,7 @@ Nice work, we've come to the end of our lesson.  But wait, one last thing, I rea
 
 Notice in this next TODO, we're using the string value of `Goodbye!`, but without storing it in a variable or constant, the value exists for a split second, and after that line is executed, exits no more:
 
-### TODO 8 : Nullify a Reference
+### TODO 8 : Existing Briefly
 
 ````javascript
 // TODO 8 : Use a value for a split second //
