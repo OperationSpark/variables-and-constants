@@ -147,7 +147,7 @@ In some runtime environments, like strict mode, you'll trip an error in attempti
 
 Sometimes, it can be a bit confusing for those of us starting out in programming to understand that, in JavaScript, primitive values are immutable, where complex objects _are_ mutable.
 
-Primitive values include the types `undefined`, `null`, `boolean`, `number`, and `string`.  They are immutable, they are never directly modified.  The number `2` is always the number `2`, and `null` is the only and only `null`.  Variables _assigned_ to primitive values can only be _reassigned_ to other values, primitive or complex.
+Primitive values include the types `undefined`, `null`, `boolean`, `number`, and `string`.  They are immutable, they are never directly modified.  The number `2` is always the number `2`, and `null` is the one and only `null`.  Variables _assigned_ to primitive values can only be _reassigned_ to other values, primitive or complex.
 
 Think about this, you never change the value of a number, you are only ever re-assigning a variable to the value of another number.  Same goes with strings, which might seem strange because strings are treated as arrays of characters, but any modifying operation on a string returns a _new_ string!  For example:
 
