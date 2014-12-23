@@ -222,10 +222,12 @@ Finally, let's try one more experiment with variables.
 
 ### TODO 7 : Nullify a Reference
 
+````javascript
 // TODO 7 : Nullify the reference held by the variable second //
 second = null;
 console.log("first: ", first);
 console.log("second: " + second);
+````
 
 **Save and Run the App!**
 
