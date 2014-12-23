@@ -241,7 +241,7 @@ Also, note that the `second` variable still exists, but its value is now `null`,
 
 Nice work, we've come to the end of our lesson.  But wait, one last thing, I really want to hit home that when we use the keywords `var` and `const`, we are asking the runtime to keep in memory these names and the values to which these names may point.  We can still use values that we don't _pin_ or _commit_ to memory, you'll just have no way to ever get them back.
 
-Notice in this next TODO, we're using the string value of `Good Bye`, but without storing it in a variable or constant, the value exists for a split second, and after that line is executed, exits no more:
+Notice in this next TODO, we're using the string value of `Goodbye!`, but without storing it in a variable or constant, the value exists for a split second, and after that line is executed, exits no more:
 
 ### TODO 8 : Nullify a Reference
 
