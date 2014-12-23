@@ -23,7 +23,7 @@ Nice, you're in business...
 
 ---
 
-### Commiting Things to Memory
+### Committing Things to Memory
 
 We can argue that variables and constants are the building blocks of any application.  Variables and constants allow us to declare that an object of some type and value exists and will stay in memory until we no longer need it.
 
@@ -143,13 +143,13 @@ In some runtime environments, like strict mode, you'll trip an error in attempti
 **IMPORTANT STEP : BEFORE WE CONTINUE > Remove the code from step 4, otherwise you'll continue to trip the error!**
 ***
 
-### Primatives are Immutable Where Objects Are Mutable
+### Primitives are Immutable Where Objects Are Mutable
 
 Sometimes, it can be a bit confusing for those of us starting out in programming to understand that, in JavaScript, primitive values are immutable, where complex objects _are_ mutable.
 
 Primitive values include the types `undefined`, `null`, `boolean`, `number`, and `string`.  They are immutable, they are never directly modified.  The number `2` is always the number `2`, and `null` is the only and only `null`.  Variables _assigned_ to primitive values can only be _reassigned_ to other values, primitive or complex.
 
-Think about this, you never change the value of a number, you are only ever reassigning a variable to the value of another number.  Same goes with strings, which might seem strange because strings are treated as arrays of characters, but any modifying operation on a string returns a _new_ string!  For example:
+Think about this, you never change the value of a number, you are only ever re-assigning a variable to the value of another number.  Same goes with strings, which might seem strange because strings are treated as arrays of characters, but any modifying operation on a string returns a _new_ string!  For example:
 
 ````javascript
 var myString = 'Hello World';
@@ -174,12 +174,12 @@ Complex objects, including arrays and objects, _are_ mutable!  So when you add e
 
 Let's look at what immutable and mutable mean when it comes to assignment of values to variables.
 
-### TODO 5 : Create and Reassign Primatives
+### TODO 5 : Create and Reassign Primitives
 
-Create some variables assigned to primative values, then reassign one of them:
+Create some variables assigned to primitive values, then reassign one of them:
 
 ````javascript
-// TODO 5 : Create two variables assigned to primative values and reassign the second variable to a new value //
+// TODO 5 : Create two variables assigned to primitive values and reassign the second variable to a new value //
 var a = 1;
 var b = a;
 console.log("a: " + a);
@@ -229,9 +229,13 @@ console.log("second: " + second);
 
 **Save and Run the App!**
 
-<img src="https://raw.githubusercontent.com/OperationSpark/variables-and-constants/master/img/mutate-an-object.png">
+<img src="https://raw.githubusercontent.com/OperationSpark/variables-and-constants/master/img/nullify-reference.png">
 
-Ok, this time around, notice that when we set `second` to `null`, we are only dereferencing the value stored in the variable `second`, and we're not altering the value stored in `first` variable.  Also, note that the `second` variable still exits, but its value is now `null`, meaning, its _empty_.
+Ok, this time around, notice that when we set `second` to `null`, we are only dereferencing the value stored in the variable `second`, and we're not altering the value stored in `first` variable.  This is because both `first` and `second` both hold references to the same object.
+
+Imagine that you and I are both looking at the same object, like a car: just because I stop looking at the car doesn't mean that it ceases to exist for you.  I've only removed my (visual) reference to the car.
+
+Also, note that the `second` variable still exists, but its value is now `null`, meaning, its _empty_.
 
 Nice work, we've come to the end of our lesson.  But wait, one last thing, I really want to hit home that when we use the keywords `var` and `const`, we are asking the runtime to keep in memory these names and the values to which these names may point.  We can still use values that we don't _pin_ or _commit_ to memory, you'll just have no way to ever get them back.
 
@@ -240,10 +244,10 @@ Notice in this next TODO, we're using the string value of `Good Bye`, but withou
 ### TODO 8 : Nullify a Reference
 
 ````javascript
-// TODO 8 : Use a value for an split second //
-console.log("Good Bye!");
+// TODO 8 : Use a value for a split second //
+console.log("Goodbye!");
 ````
 
 **Save and Run the App!**
 
-    Good Bye!
+    Goodbye!
